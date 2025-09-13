@@ -78,7 +78,7 @@ feign:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:7081/eureka
+      defaultZone: ${EUREKA_CLIENT_SERVICE_URL_DEFAULT_ZONE:http://localhost:7081/eureka}
   instance:
     hostname: localhost
     instance-id: ${spring.application.name}:${server.port}
