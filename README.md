@@ -32,8 +32,8 @@ docker compose down
 docker logs dicegame-app -f
 
 # swagger-ui
-http://localhost:9080/swagger-ui/index.html
+http://localhost:7083/dicegame-service/swagger-ui/index.html
 
 # api documentation
-http://localhost:9080/v3/api-docs
+http://localhost:7083/dicegame-service/v3/api-docs
 
