@@ -1,4 +1,10 @@
 services:
+  zipkin:
+    image: openzipkin/zipkin
+    container_name: zipkin
+    ports:
+      - "9411:9411"   # host:container
+
   postgres:
     image: postgres:15
     container_name: dicegame-postgres
@@ -51,6 +57,7 @@ services:
     container_name: dicegame-app
     restart: always
     depends_on:
+      - zipkin
       - postgres
       - redis
       - kafka
@@ -68,7 +75,7 @@ services:
 
       KAFKA_BOOTSTRAP_SERVERS: kafka:9092
     ports:
-      - "9080:9080"  # host:container
+      - "7083:7083"  # host:container
 
 volumes:
   postgres_data:
