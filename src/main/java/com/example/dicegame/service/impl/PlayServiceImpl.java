@@ -1,12 +1,12 @@
 package com.example.dicegame.service.impl;
 
+import com.example.common.model.event.NotificationEvent;
 import com.example.dicegame.client.support.RollDiceSupport;
 import com.example.dicegame.config.AppConfig;
 import com.example.dicegame.model.dto.response.PlayerResponse;
 import com.example.dicegame.model.entity.Game;
 import com.example.dicegame.model.entity.GamePlayer;
 import com.example.dicegame.model.entity.Player;
-import com.example.dicegame.model.event.NotificationEvent;
 import com.example.dicegame.repository.GamePlayerCustomRepository;
 import com.example.dicegame.repository.GamePlayerRepository;
 import com.example.dicegame.repository.GameRepository;
@@ -25,9 +25,9 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+import static com.example.common.model.enums.GameStateType.FINISHED;
+import static com.example.common.model.enums.GameStateType.PRIZE_GRANTED;
 import static com.example.dicegame.constant.AppConstant.GAME_KAY;
-import static com.example.dicegame.model.enums.GameStateType.FINISHED;
-import static com.example.dicegame.model.enums.GameStateType.PRIZE_GRANTED;
 import static com.example.dicegame.model.enums.State.*;
 import static com.example.dicegame.model.template.NotificationTemplate.*;
 import static com.example.dicegame.util.ObjectUtil.mapObject;
