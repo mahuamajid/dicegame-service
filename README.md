@@ -37,3 +37,6 @@ http://localhost:7083/dicegame-service/swagger-ui/index.html
 # api documentation
 http://localhost:7083/dicegame-service/v3/api-docs
 
+# use api gateway
+http://localhost:7082/swagger-ui/index.html
+
